@@ -31,7 +31,7 @@ func (c *TFOClient) Send() (err error) {
 
 	// Data to appear, if an existing tcp fast open cookie is available, this
 	// data will appear in the SYN packet, if not, it will appear in the ACK.
-	data := []byte("Hello TCP Fast Open")
+	data := []byte("GET / HTTP/1.0\r\n\r\n")
 
 	log.Printf("Client: Sending to server: %#v\n", string(data))
 
